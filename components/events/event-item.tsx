@@ -5,7 +5,7 @@ import ArrowRightIcon from "../icons/arrow-right-icon";
 import DateIcon from "../icons/date-icon";
 
 
-export default function EventItem(props: { title: any; image: any; date: any; location: any; id: any; }) {
+export default function EventItem(props: any) {
 
     const { title, image, date, location, id } = props;
 
