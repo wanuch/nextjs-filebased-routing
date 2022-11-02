@@ -5,6 +5,7 @@ import EventContent from "../../components/event-detail/event-content";
 import EventLogistics from "../../components/event-detail/event-logistics";
 import EventSummary from "../../components/event-detail/event-summary";
 import { getEventById } from "../../dummy-data";
+import ErrorAlert from "../../components/ui/error-alert";
 
 export default function EventDetail() {
 
@@ -17,9 +18,11 @@ export default function EventDetail() {
     const event = getEventById(eventId);
     console.log(event);
     if (!event) {
-        return <div>
-            <h1>No event found!</h1>
-        </div>
+        return <Fragment>
+            <ErrorAlert>
+                <p>No event found!</p>
+            </ErrorAlert>
+        </Fragment>
     }
 
     return (
